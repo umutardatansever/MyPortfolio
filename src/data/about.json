@@ -1,0 +1,38 @@
+{
+  "biography": "Yazılım dünyasına meraklı, modern web teknolojileri ve gömülü sistemler üzerinde projeler geliştiren bir Bilgisayar Mühendisliği öğrencisiyim. Teorik bilgilerimi yurt dışı deneyimleriyle pekiştirerek hem teknik hem de global bir bakış açısı kazanmayı hedefliyorum.",
+  "education": [
+    {
+      "school": "İstanbul Rumeli Üniversitesi",
+      "degree": "Bilgisayar Mühendisliği",
+      "years": "2021 - Devam Ediyor"
+    },
+    {
+      "school": "Politechnika Częstochowska (Erasmus+ / Polonya)",
+      "degree": "Computer Science - Geçen Bahar Dönemi",
+      "years": "2024"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Erasmus+ Programı / Polonya",
+      "position": "Teknik Araştırmacı",
+      "years": "2024 Bahar",
+      "description": "DSM-51 mikrodenetleyici mimarisi üzerine çalışmalar yapıldı ve Matlab kütüphaneleri kullanılarak görüntü işleme algoritmaları geliştirildi."
+    },
+    {
+      "company": "Voleybol Kariyeri",
+      "position": "Lisanslı Sporcu",
+      "years": "Geçmiş Deneyim",
+      "description": "Doğuş Akademi ve SBSK (Sultangazi Belediye Spor Kulübü) bünyesinde profesyonel voleybol eğitimi alındı ve müsabakalarda yer alındı."
+    }
+  ],
+  "hobbies": [
+    "Araştırmacılık", 
+    "Voleybol", 
+    "Basketbol", 
+    "Tenis", 
+    "Yüzme", 
+    "Yelken", 
+    "Fotoğrafçılık"
+  ]
+}

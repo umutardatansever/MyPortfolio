@@ -1,0 +1,8 @@
+[
+  { "id": 1, "category": "MATLAB", "image": "thinkpalmhumanposeestimation.png", "github": "#", "demo": "#" },
+  { "id": 2, "category": "C++", "image": "cıktıoperatingproje.png", "github": "#", "demo": "#" },
+  { "id": 3, "category": "Assembly", "image": "emu8086proje.png", "github": "#", "demo": "#" },
+  { "id": 4, "category": "Python", "image": "Figure_2.png", "github": "#", "demo": "#" },
+  { "id": 5, "category": "HTML/CSS", "image": "HtmlCssPortfolyo.png", "github": "#", "demo": "#" },
+  { "id": 6, "category": "Python", "image": "OyunSwipe.png", "github": "#", "demo": "#", "isPrivate": true }
+]

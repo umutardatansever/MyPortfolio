@@ -1,0 +1,94 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Umut Arda Tansever",
+    "subtitle": "Computer Engineering Student & Frontend Developer",
+    "description": "A Computer Engineering student passionate about software, developing projects with modern web technologies.",
+    "downloadCV": "Download CV"
+  },
+  "about": {
+    "title": "About Me",
+    "bioTitle": "Biography",
+    "bioText": "I am a Computer Engineering student passionate about software, developing projects on modern web technologies and embedded systems. I aim to gain both a technical and global perspective by reinforcing my theoretical knowledge with international experiences.",
+    "eduTitle": "Education",
+    "eduUni": "Istanbul Rumeli University",
+    "eduDept": "Computer Engineering",
+    "present": "Present",
+    "erasmusCountry": "Erasmus+ Programme / Poland",
+    "erasmusTerm": "Past Spring Semester",
+    "expTitle": "Experience",
+    "internTitle": "Technical Researcher",
+    "internDate": "Spring 2024",
+    "internDesc": "Worked on DSM-51 microcontroller architecture and developed image processing algorithms using Matlab libraries.",
+    "volleyTitle": "Volleyball Career",
+    "volleySub": "Licensed Athlete",
+    "pastExp": "Past Experience",
+    "volleyDesc": "Received professional volleyball training and participated in competitions at Doğuş Academy and SBSK (Sultangazi Municipality Sports Club).",
+    "hobbyTitle": "Interests & Hobbies",
+    "hobbies": ["Research", "Volleyball", "Basketball", "Tennis", "Swimming", "Sailing", "Photography"]
+  },
+  "projects": {
+    "title": "My Projects",
+    "filterAll": "All",
+    "accessRestricted": "ACCESS RESTRICTED",
+    "viewReport": "View Technical Report",
+    "githubBtn": "View on GitHub",
+    "items": {
+      "1": {
+        "title": "Erasmus: Human Pose Estimation",
+        "desc": "Real-time human figure tracking using MATLAB image processing.",
+        "longDesc": "Developed during my Erasmus term in Poland using MATLAB Image Processing Toolbox. The system captures frame-by-frame images to track human figures. It analyzes body positions (Pose Estimation) to define activities in real-time. (Visual ref: thinkpalm.com)",
+        "tags": ["MATLAB", "Image Processing", "Pose Estimation"]
+      },
+      "2": {
+        "title": "Operating Systems Simulation",
+        "desc": "Analysis of SJF and Round Robin scheduling algorithms.",
+        "longDesc": "This project simulates SJF and Round Robin scheduling algorithms using C++. Using Arrival Time (AT) and Burst Time (BT) data, it calculates Completion Time (CT), Turn-Around Time (TAT), and Waiting Time (WT), visualized with Gantt charts.",
+        "tags": ["C++", "OS", "Scheduling"]
+      },
+      "3": {
+        "title": "Emu8086 Microprocessor Project",
+        "desc": "Real-time clock application using 8086 Assembly language.",
+        "longDesc": "Focusing on low-level programming, this project displays system time and date (Ex: 24/12/2025 - Wednesday) in real-time on an emulator screen. BIOS interrupts were actively used for memory management and hardware interaction.",
+        "tags": ["Assembly", "Emu8086", "Microprocessors"]
+      },
+      "4": {
+        "title": "Data Analysis & Algorithm Report",
+        "desc": "Analysis of machine learning clustering algorithms.",
+        "longDesc": "This study analyzes the effectiveness of K-Means and DBSCAN clustering algorithms on datasets, as well as the network optimization performance of Prim's and Dijkstra's algorithms. Memory usage and execution times were compared in detail.",
+        "tags": ["Python", "Machine Learning", "Data Analysis", "Algorithms"]
+      },
+      "5": {
+        "title": "Modern Web UI Design",
+        "desc": "Responsive portfolio interface developed with HTML5 and CSS3.",
+        "longDesc": "A modern, responsive portfolio interface built exclusively with HTML5 and CSS3. Using flexbox and grid layouts, the project focuses on cross-device compatibility and user-centric design experience.",
+        "tags": ["HTML5", "CSS3", "Responsive", "UI Design"]
+      },
+      "6": {
+        "title": "GameSwipe: AI-Driven Recommendation",
+        "desc": "Personalized game recommendation system using Python and ML.",
+        "longDesc": "Developed with Python and advanced data processing libraries, this app analyzes user interactions frame-by-frame to offer personalized game suggestions. It learns user preferences over time using ML algorithms. Source code is private for commercial reasons.",
+        "tags": ["Python", "AI/ML", "Private"]
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "infoTitle": "Contact Information",
+    "followTitle": "Follow Me",
+    "formName": "Your Name",
+    "formEmail": "Your Email",
+    "formSubject": "Subject",
+    "formMsg": "Your Message",
+    "formBtn": "Send Message"
+  },
+  "footer": {
+    "rights": "All Rights Reserved."
+  }
+}
