@@ -1,8 +1,45 @@
 [
-  { "id": 1, "category": "MATLAB", "image": "thinkpalmhumanposeestimation.png", "github": "#", "demo": "#" },
-  { "id": 2, "category": "C++", "image": "cıktıoperatingproje.png", "github": "https://github.com/umutardatansever/CPUScheduler-Sim", "demo": "#" },
-  { "id": 3, "category": "Assembly", "image": "emu8086proje.png", "github": "https://github.com/umutardatansever/8086-Assembly-DigitalClock", "demo": "#" },
-  { "id": 4, "category": "Python", "image": "Figure_2.png", "github": "https://github.com/umutardatansever/CrimeAnalysis", "demo": "#" },
-  { "id": 5, "category": "HTML/CSS", "image": "HtmlCssPortfolyo.png", "github": "#", "demo": "#" },
-  { "id": 6, "category": "Python", "image": "OyunSwipe.png", "github": "#", "demo": "#", "isPrivate": true }
-]
+  { 
+    "id": 1, 
+    "category": "MATLAB", 
+    "image": "thinkpalmhumanposeestimation.png", 
+    "github": "#", 
+    "demo": "#" 
+  },
+  { 
+    "id": 2, 
+    "category": "C++", 
+    "image": "cıktıoperatingproje.png", 
+    "github": "https://github.com/umutardatansever/CPUScheduler-Sim", 
+    "demo": "#" 
+  },
+  { 
+    "id": 3, 
+    "category": "Assembly", 
+    "image": "emu8086proje.png", 
+    "github": "https://github.com/umutardatansever/8086-Assembly-DigitalClock", 
+    "demo": "#" 
+  },
+  { 
+    "id": 4, 
+    "category": "Python", 
+    "image": "Figure_2.png", 
+    "github": "https://github.com/umutardatansever/CrimeAnalysis", 
+    "demo": "#" 
+  },
+  { 
+    "id": 5, 
+    "category": "HTML/CSS", 
+    "image": "HtmlCssPortfolyo.png", 
+    "github": "https://github.com/umutardatansever/BasicProtfolio", 
+    "demo": "#" 
+  },
+  { 
+    "id": 6, 
+    "category": "Python", 
+    "image": "OyunSwipe.png", 
+    "github": "#", 
+    "demo": "#", 
+    "isPrivate": true 
+  }
+]  
