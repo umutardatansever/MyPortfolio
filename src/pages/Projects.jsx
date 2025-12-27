@@ -26,17 +26,22 @@ export default function Projects() {
         {translations.projects?.title}
       </h2>
 
-      {/* Kategori Filtreleri */}
       <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginBottom: '60px', flexWrap: 'wrap' }}>
         {categories.map(cat => (
           <button key={cat} onClick={() => setFilter(cat)} className={`filter-btn ${filter === cat ? 'active' : ''}`}
-            style={{ padding: '12px 28px', borderRadius: '50px', border: filter === cat ? '1px solid var(--primary)' : '1px solid var(--glass-border)', background: filter === cat ? 'var(--primary)' : 'var(--btn-passive)', color: filter === cat ? '#ffffff' : 'var(--btn-text-passive)', cursor: 'pointer', transition: '0.4s', fontWeight: 600 }}>
+            style={{ 
+              padding: '12px 28px', borderRadius: '50px', 
+              border: filter === cat ? '1px solid var(--primary)' : '1px solid var(--glass-border)',
+              background: filter === cat ? 'var(--primary)' : 'var(--btn-passive)',
+              color: filter === cat ? '#ffffff' : 'var(--btn-text-passive)',
+              cursor: 'pointer', transition: '0.4s', fontWeight: 600
+            }}
+          >
             {cat === 'All' ? translations.projects?.filterAll : cat}
           </button>
         ))}
       </div>
 
-      {/* Proje Kartları */}
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '40px', justifyContent: 'center' }}>
         {filteredProjects.map(project => {
           const itemTrans = translations.projects?.items?.[project.id];
@@ -47,7 +52,6 @@ export default function Projects() {
             <div key={project.id} className="glass-card" onClick={() => setSelectedProject(project)} 
                  style={{ cursor: 'pointer', width: '100%', maxWidth: '420px', minHeight: '520px', display: 'flex', flexDirection: 'column', position: 'relative' }}>
               
-              {/* Görsel Alanı */}
               <div style={{ height: '260px', overflow: 'hidden', borderRadius: '20px 20px 0 0', position: 'relative', background: '#000' }}>
                 <img src={getImageUrl(project.image)} alt="project" 
                      style={{ width: '100%', height: '100%', objectFit: 'cover', filter: isSecret ? 'blur(25px) brightness(0.4)' : 'none' }} />
@@ -60,21 +64,17 @@ export default function Projects() {
                 )}
               </div>
 
-              {/* Metin Alanı - Hizalaması yandaki kartlarla aynı yapıldı */}
               <div style={{ padding: '30px', flex: 1, display: 'flex', flexDirection: 'column', gap: '15px' }}>
-                
-                {/* Başlık Seviyesi: Yandaki uygulamalarla aynı yükseklikte */}
                 <h3 style={{ 
                   color: 'var(--primary)', 
                   fontSize: '1.5rem', 
                   fontWeight: 700, 
-                  textAlign: isSecret ? 'center' : 'left',
-                  width: '100%'
+                  textAlign: isSecret ? 'center' : 'left', 
+                  width: '100%' 
                 }}>
                   {displayTitle}
                 </h3>
                 
-                {/* İçerik Alanı: Gizli ise blurlu ama yerinde duruyor */}
                 <div style={{ 
                   filter: isSecret ? 'blur(10px)' : 'none', 
                   opacity: isSecret ? 0.4 : 1, 
@@ -89,7 +89,6 @@ export default function Projects() {
                     {itemTrans?.desc}
                   </p>
                   
-                  {/* Etiketler (Tags) */}
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: isSecret ? 'center' : 'flex-start' }}>
                     {itemTrans?.tags?.map(tag => (
                       <span key={tag} style={{ fontSize: '0.75rem', background: 'var(--btn-passive)', color: 'var(--btn-text-passive)', padding: '6px 14px', borderRadius: '50px', fontWeight: 600, border: '1px solid var(--glass-border)' }}>
@@ -104,7 +103,6 @@ export default function Projects() {
         })}
       </div>
 
-      {/* Detay Modalı (Modal içindeki orta hizalama korundu) */}
       {selectedProject && (() => {
         const itemTrans = translations.projects?.items?.[selectedProject.id];
         const isSecret = selectedProject.isPrivate || itemTrans?.title?.toLowerCase().includes("oyunswipe");
@@ -142,10 +140,19 @@ export default function Projects() {
                         ))}
                       </div>
                       <p style={{ color: 'var(--text-main)', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '35px', opacity: 0.9 }}>{itemTrans?.longDesc}</p>
-                      <div style={{ display: 'flex', gap: '20px' }}>
-                        <a href={selectedProject.github} target="_blank" rel="noreferrer" className="btn-modern" style={{ padding: '15px 35px', display: selectedProject.github === "#" ? "none" : "flex", alignItems: 'center', gap: '10px' }}>
-                          <FaGithub /> GitHub'da İncele
-                        </a>
+                      
+                      <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+                        {selectedProject.github && selectedProject.github !== "#" && (
+                          <a href={selectedProject.github} target="_blank" rel="noreferrer" className="btn-modern" style={{ padding: '15px 35px', display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+                            <FaGithub /> GitHub'da İncele
+                          </a>
+                        )}
+
+                        {selectedProject.id === 4 && (
+                          <button onClick={() => navigate('/project-detail/4')} className="btn-modern" style={{ padding: '15px 35px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                            <FaFileAlt /> Raporu Görüntüle
+                          </button>
+                        )}
                       </div>
                     </>
                   )}
