@@ -1,30 +1,28 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { useTheme } from '../context/ThemeContext';
 import { useLanguage } from '../context/LanguageContext';
-import { 
-  FaHome, FaUser, FaTools, FaLaptopCode, FaEnvelope, FaBars, FaTimes 
+import ThemeToggle from './ThemeToggle';
+import LanguageSwitcher from './LanguageSwitcher';
+import {
+  FaHome, FaUser, FaTools, FaLaptopCode, FaEnvelope, FaBars, FaTimes
 } from 'react-icons/fa';
-import { HiMoon, HiSun } from 'react-icons/hi'; 
 
 export default function Navbar() {
-  const { theme, toggleTheme } = useTheme();
-  const { translations, toggleLanguage, lang } = useLanguage();
+  const { translations, lang, toggleLanguage } = useLanguage();
   const location = useLocation();
-  
-  // Mobil menü durumu
+
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const isActive = (path) => location.pathname === path;
 
   const btnStyle = {
-    background: 'var(--glass-border)', 
-    border: '1px solid rgba(255,255,255,0.1)', 
-    padding: '10px 18px', 
-    borderRadius: '15px', 
-    cursor: 'pointer', 
-    fontWeight: 800, 
-    color: 'var(--text-main)', 
+    background: 'var(--glass-border)',
+    border: '1px solid rgba(255,255,255,0.1)',
+    padding: '10px 18px',
+    borderRadius: '15px',
+    cursor: 'pointer',
+    fontWeight: 800,
+    color: 'var(--text-main)',
     transition: '0.4s cubic-bezier(0.4, 0, 0.2, 1)',
     display: 'flex',
     alignItems: 'center',
@@ -54,17 +52,17 @@ export default function Navbar() {
         display: 'flex', justifyContent: 'space-between', alignItems: 'center',
         padding: '0 40px', borderRadius: '24px'
       }} className="glass-card">
-        
+
         {/* Logo */}
-        <div style={{ 
+        <div style={{
           fontWeight: 900, fontSize: '1.2rem', letterSpacing: '1px',
           background: 'linear-gradient(to right, var(--primary), var(--secondary))',
           WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', whiteSpace: 'nowrap'
         }}>
           UMUT ARDA TANSEVER
         </div>
-        
-        {/* Desktop Menü - Geniş ekranlarda görünür */}
+
+        {/* Desktop Menu */}
         <div className="desktop-menu" style={{ display: 'flex', gap: '25px' }}>
           <Link style={navLinkStyle('/')} to="/">
             <FaHome /> <span>{translations.nav.home}</span>
@@ -73,7 +71,7 @@ export default function Navbar() {
             <FaUser /> <span>{translations.nav.about}</span>
           </Link>
           <Link style={navLinkStyle('/yetenekler')} to="/yetenekler">
-            <FaTools /> <span>{translations.nav.skills}</span> 
+            <FaTools /> <span>{translations.nav.skills}</span>
           </Link>
           <Link style={navLinkStyle('/projeler')} to="/projeler">
             <FaLaptopCode /> <span>{translations.nav.projects}</span>
@@ -83,33 +81,16 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Butonlar ve Hamburger */}
+        {/* Controls */}
         <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
-          
+
           <div className="desktop-controls" style={{ display: 'flex', gap: '15px' }}>
-            <button onClick={toggleLanguage} style={btnStyle}>
-              <span style={{ opacity: lang === 'tr' ? 1 : 0.3, transition: '0.3s' }}>TR</span>
-              <span style={{ margin: '0 5px', opacity: 0.2 }}>|</span>
-              <span style={{ opacity: lang === 'en' ? 1 : 0.3, transition: '0.3s' }}>EN</span>
-            </button>
-            
-            <button onClick={toggleTheme} style={{
-                ...btnStyle, 
-                background: theme === 'light' ? '#ffffff' : '#1e293b', 
-                color: theme === 'light' ? '#f59e0b' : '#a855f7', 
-                width: '45px', height: '45px', fontSize: '1.3rem',
-                border: theme === 'light' ? '2px solid rgba(245, 158, 11, 0.5)' : '2px solid rgba(139, 92, 246, 0.5)',
-                boxShadow: theme === 'light' 
-                  ? '0 0 15px rgba(245, 158, 11, 0.4)' 
-                  : '0 0 15px rgba(139, 92, 246, 0.5)',
-                transition: 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
-              }}>
-              {theme === 'light' ? <HiMoon /> : <HiSun />}
-            </button>
+            <LanguageSwitcher />
+            <ThemeToggle />
           </div>
 
-          {/* Hamburger İkonu - Sadece mobilde görünür */}
-          <button 
+          {/* Hamburger Button */}
+          <button
             className="hamburger-btn"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             style={{ ...btnStyle, display: 'none', width: '45px', height: '45px', padding: 0 }}
@@ -119,7 +100,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobil Menü Paneli */}
+      {/* Mobile Menu */}
       <div className={`mobile-menu ${isMobileOpen ? 'open' : ''}`} style={{
         position: 'fixed', top: 0, right: '-100%', width: '100%', height: '100vh',
         background: 'var(--glass-bg)', backdropFilter: 'blur(20px)', zIndex: 999,
@@ -127,29 +108,29 @@ export default function Navbar() {
         flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '30px'
       }}>
         <Link style={navLinkStyle('/')} to="/" onClick={() => setIsMobileOpen(false)}>
-          <FaHome size={24} /> <span style={{fontSize: '1.5rem'}}>{translations.nav.home}</span>
+          <FaHome size={24} /> <span style={{ fontSize: '1.5rem' }}>{translations.nav.home}</span>
         </Link>
         <Link style={navLinkStyle('/hakkimda')} to="/hakkimda" onClick={() => setIsMobileOpen(false)}>
-          <FaUser size={24} /> <span style={{fontSize: '1.5rem'}}>{translations.nav.about}</span>
+          <FaUser size={24} /> <span style={{ fontSize: '1.5rem' }}>{translations.nav.about}</span>
         </Link>
         <Link style={navLinkStyle('/yetenekler')} to="/yetenekler" onClick={() => setIsMobileOpen(false)}>
-          <FaTools size={24} /> <span style={{fontSize: '1.5rem'}}>{translations.nav.skills}</span>
+          <FaTools size={24} /> <span style={{ fontSize: '1.5rem' }}>{translations.nav.skills}</span>
         </Link>
         <Link style={navLinkStyle('/projeler')} to="/projeler" onClick={() => setIsMobileOpen(false)}>
-          <FaLaptopCode size={24} /> <span style={{fontSize: '1.5rem'}}>{translations.nav.projects}</span>
+          <FaLaptopCode size={24} /> <span style={{ fontSize: '1.5rem' }}>{translations.nav.projects}</span>
         </Link>
         <Link style={navLinkStyle('/iletisim')} to="/iletisim" onClick={() => setIsMobileOpen(false)}>
-          <FaEnvelope size={24} /> <span style={{fontSize: '1.5rem'}}>{translations.nav.contact}</span>
+          <FaEnvelope size={24} /> <span style={{ fontSize: '1.5rem' }}>{translations.nav.contact}</span>
         </Link>
 
-        {/* Mobil Dil ve Tema Butonları */}
         <div style={{ display: 'flex', gap: '20px', marginTop: '20px' }}>
-          <button onClick={toggleLanguage} style={btnStyle}>DİL / LANG</button>
-          <button onClick={toggleTheme} style={btnStyle}>TEMA / THEME</button>
+          <button onClick={toggleLanguage} style={btnStyle}>
+            {lang === 'tr' ? 'English' : 'Türkçe'}
+          </button>
+          <ThemeToggle />
         </div>
       </div>
 
-      {/* Responsive Stiller */}
       <style>{`
         @media (max-width: 992px) {
           .desktop-menu, .desktop-controls {

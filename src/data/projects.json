@@ -1,45 +1,95 @@
 [
-  { 
-    "id": 1, 
-    "category": "MATLAB", 
-    "image": "thinkpalmhumanposeestimation.png", 
-    "github": "#", 
-    "demo": "#" 
+  {
+    "id": 1,
+    "title": "Erasmus: İnsan Pozisyonu Tanıma",
+    "description": "MATLAB ile saniye saniye görüntü işleyerek insan figürü takibi.",
+    "image": "thinkpalmhumanposeestimation.png",
+    "technologies": [
+      "MATLAB",
+      "Image Processing",
+      "Pose Estimation"
+    ],
+    "category": "MATLAB",
+    "githubUrl": "#",
+    "demoUrl": "#",
+    "isFeatured": true
   },
-  { 
-    "id": 2, 
-    "category": "C++", 
-    "image": "cıktıoperatingproje.png", 
-    "github": "https://github.com/umutardatansever/CPUScheduler-Sim", 
-    "demo": "#" 
+  {
+    "id": 2,
+    "title": "İşletim Sistemleri Simülasyonu",
+    "description": "C++ ile geliştirilen SJF ve Round Robin algoritmaları analizi.",
+    "image": "cıktıoperatingproje.png",
+    "technologies": [
+      "C++",
+      "OS",
+      "Scheduling"
+    ],
+    "category": "C++",
+    "githubUrl": "https://github.com/umutardatansever/CPUScheduler-Sim",
+    "demoUrl": "#",
+    "isFeatured": true
   },
-  { 
-    "id": 3, 
-    "category": "Assembly", 
-    "image": "emu8086proje.png", 
-    "github": "https://github.com/umutardatansever/8086-Assembly-DigitalClock", 
-    "demo": "#" 
+  {
+    "id": 3,
+    "title": "Emu8086 Mikroişlemci Projesi",
+    "description": "8086 Assembly dili ile gerçek zamanlı saat uygulaması.",
+    "image": "emu8086proje.png",
+    "technologies": [
+      "Assembly",
+      "Emu8086",
+      "Microprocessors"
+    ],
+    "category": "Assembly",
+    "githubUrl": "https://github.com/umutardatansever/8086-Assembly-DigitalClock",
+    "demoUrl": "#",
+    "isFeatured": false
   },
-  { 
-    "id": 4, 
-    "category": "Python", 
-    "image": "Figure_2.png", 
-    "github": "https://github.com/umutardatansever/CrimeAnalysis", 
-    "demo": "#" 
+  {
+    "id": 4,
+    "title": "Veri Analizi ve Algoritma Performans Raporu",
+    "description": "Makine öğrenmesi kümeleme algoritmaları analizi.",
+    "image": "Figure_2.png",
+    "technologies": [
+      "Python",
+      "Machine Learning",
+      "Data Analysis",
+      "Algorithms"
+    ],
+    "category": "Python",
+    "githubUrl": "https://github.com/umutardatansever/CrimeAnalysis",
+    "demoUrl": "#",
+    "isFeatured": true
   },
-  { 
-    "id": 5, 
-    "category": "HTML/CSS", 
-    "image": "HtmlCssPortfolyo.png", 
-    "github": "https://github.com/umutardatansever/BasicProtfolio", 
-    "demo": "#" 
+  {
+    "id": 5,
+    "title": "Modern Web Arayüzü Tasarımı",
+    "description": "HTML5 ve CSS3 kullanılarak geliştirilmiş responsive portfolyo arayüzü.",
+    "image": "HtmlCssPortfolyo.png",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Responsive",
+      "UI Design"
+    ],
+    "category": "HTML/CSS",
+    "githubUrl": "https://github.com/umutardatansever/BasicProtfolio",
+    "demoUrl": "#",
+    "isFeatured": false
   },
-  { 
-    "id": 6, 
-    "category": "Python", 
-    "image": "OyunSwipe.png", 
-    "github": "#", 
-    "demo": "#", 
-    "isPrivate": true 
+  {
+    "id": 6,
+    "title": "OyunSwipe: Yapay Zeka Destekli Öneri Sistemi",
+    "description": "Python ve ML ile kişiselleştirilmiş oyun öneri sistemi.",
+    "image": "OyunSwipe.png",
+    "technologies": [
+      "Python",
+      "AI/ML",
+      "Private"
+    ],
+    "category": "Python",
+    "githubUrl": "#",
+    "demoUrl": "#",
+    "isFeatured": false,
+    "isPrivate": true
   }
-]  
+]

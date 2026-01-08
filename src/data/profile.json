@@ -2,9 +2,15 @@
   "name": "Umut Arda Tansever",
   "title": "Bilgisayar Mühendisliği Öğrencisi & Frontend Developer",
   "bio": "Yazılım dünyasına meraklı, modern web teknolojileri ile projeler geliştiren bir öğrenciyim.",
+  "avatar": "/src/assets/ben.jpeg",
+  "email": "umutarda.tansever@stu.rumeli.edu.tr",
+  "phone": "+90 505 815 82 51",
+  "location": "İstanbul, Türkiye",
   "social": {
     "github": "https://github.com/umutardatansever",
-    "linkedin": "https://www.linkedin.com/in/umut-arda-tansever-15606a369"
+    "linkedin": "https://www.linkedin.com/in/umut-arda-tansever-15606a369",
+    "twitter": "https://twitter.com",
+    "instagram": "https://instagram.com/umuutti"
   },
-  "cvFile": "/cv.pdf"
+  "cvFile": "/src/assets/CV.pdf"
 }

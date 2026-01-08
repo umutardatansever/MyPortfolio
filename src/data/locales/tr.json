@@ -31,7 +31,18 @@
     "pastExp": "Geçmiş Deneyim",
     "volleyDesc": "Doğuş Akademi ve SBSK (Sultangazi Belediye Spor Kulübü) bünyesinde profesyonel voleybol eğitimi alındı ve müsabakalarda yer alındı.",
     "hobbyTitle": "İlgi Alanları & Hobiler",
-    "hobbies": ["Araştırmacılık", "Voleybol", "Basketbol", "Tenis", "Yüzme", "Yelken", "Fotoğrafçılık"]
+    "hobbies": [
+      "Araştırmacılık",
+      "Voleybol",
+      "Basketbol",
+      "Tenis",
+      "Yüzme",
+      "Yelken",
+      "Fotoğrafçılık"
+    ]
+  },
+  "skills": {
+    "title": "Teknik Yetenekler"
   },
   "projects": {
     "title": "Projelerim",
@@ -44,37 +55,63 @@
         "title": "Erasmus: İnsan Pozisyonu Tanıma",
         "desc": "MATLAB ile saniye saniye görüntü işleyerek insan figürü takibi.",
         "longDesc": "Polonya'daki Erasmus döneminde MATLAB Image Processing Toolbox kullanılarak geliştirilen bu projede; kamera üzerinden saniye saniye görüntü alınarak insan figürü takip edilmektedir. Sistem, kişinin kol hareketlerini ve pozisyonunu (Pose Estimation) analiz ederek o anki aktivitesini gerçek zamanlı tanımlar.",
-        "tags": ["MATLAB", "Görüntü İşleme", "Pose Estimation"]
+        "tags": [
+          "MATLAB",
+          "Görüntü İşleme",
+          "Pose Estimation"
+        ]
       },
       "2": {
         "title": "İşletim Sistemleri Simülasyonu",
         "desc": "C++ ile geliştirilen SJF ve Round Robin algoritmaları analizi.",
         "longDesc": "C++ ile geliştirilen bu dönem projesinde; SJF ve Round Robin planlama algoritmaları simüle edilmiştir. Kuyruğa giren işlemlerin Arrival Time (AT) ve Burst Time (BT) bilgileri kullanılarak her bir sürecin Completion Time (CT), Turn-Around Time (TAT) ve Waiting Time (WT) süreleri hesaplanmış ve Gantt şeması ile karşılaştırılmıştır.",
-        "tags": ["C++", "OS", "Scheduling"]
+        "tags": [
+          "C++",
+          "OS",
+          "Scheduling"
+        ]
       },
       "3": {
         "title": "Emu8086 Mikroişlemci Projesi",
         "desc": "8086 Assembly dili ile gerçek zamanlı saat uygulaması.",
         "longDesc": "Düşük seviyeli programlama prensiplerine odaklanan bu projede, sistem saati ve tarihi (Örn: 24/12/2025 - Çarşamba) gerçek zamanlı olarak emülatör ekranında görüntülenmektedir. Projede BIOS kesmeleri (Interrupts) aktif olarak kullanılmış ve bellek yönetimi optimizasyonu sağlanmıştır.",
-        "tags": ["Assembly", "Emu8086", "Microprocessors"]
+        "tags": [
+          "Assembly",
+          "Emu8086",
+          "Microprocessors"
+        ]
       },
       "4": {
         "title": "Veri Analizi ve Algoritma Performans Raporu",
         "desc": "Makine öğrenmesi kümeleme algoritmaları analizi.",
         "longDesc": "Bu çalışma; K-Means ve DBSCAN kümeleme algoritmalarının veri setleri üzerindeki etkinliğini, Prim's ve Dijkstra algoritmalarının ise ağ optimizasyonu performansını analiz eder. Çalışma kapsamında bellek kullanımı ve çalışma süreleri detaylı olarak karşılaştırılmıştır.",
-        "tags": ["Python", "Machine Learning", "Data Analysis", "Algorithms"]
+        "tags": [
+          "Python",
+          "Machine Learning",
+          "Data Analysis",
+          "Algorithms"
+        ]
       },
       "5": {
         "title": "Modern Web Arayüzü Tasarımı",
         "desc": "HTML5 ve CSS3 kullanılarak geliştirilmiş responsive portfolyo arayüzü.",
         "longDesc": "Sadece HTML5 ve CSS3 kullanılarak geliştirilmiş, responsive (mobil uyumlu) modern bir portfolyo arayüzü. Projede flexbox ve grid yapıları kullanılarak cihazlar arası tam uyumluluk ve kullanıcı deneyimi odaklı bir tasarım hedeflenmiştir.",
-        "tags": ["HTML5", "CSS3", "Responsive", "UI Design"]
+        "tags": [
+          "HTML5",
+          "CSS3",
+          "Responsive",
+          "UI Design"
+        ]
       },
       "6": {
         "title": "OyunSwipe: Yapay Zeka Destekli Öneri Sistemi",
         "desc": "Python ve ML ile kişiselleştirilmiş oyun öneri sistemi.",
         "longDesc": "Python ve gelişmiş veri işleme kütüphaneleri kullanılarak geliştirilen bu uygulama, kullanıcı etkileşimlerini saniye saniye analiz ederek kişiselleştirilmiş oyun önerileri sunar. Gelişmiş makine öğrenmesi algoritmaları sayesinde kullanıcı zevkini zamanla öğrenir. Projenin mimarisi ve kaynak kodları ticari gizlilik nedeniyle kapalıdır.",
-        "tags": ["Python", "AI/ML", "Private"]
+        "tags": [
+          "Python",
+          "AI/ML",
+          "Private"
+        ]
       }
     }
   },
@@ -86,7 +123,11 @@
     "formEmail": "E-posta Adresiniz",
     "formSubject": "Konu",
     "formMsg": "Mesajınız",
-    "formBtn": "Mesaj Gönder"
+    "formBtn": "Mesaj Gönder",
+    "errorRequired": "Lütfen tüm alanları doldurunuz.",
+    "errorEmail": "Geçerli bir e-posta adresi giriniz.",
+    "successTitle": "Başarıyla Gönderildi!",
+    "successMsg": "En kısa sürede dönüş yapacağım."
   },
   "footer": {
     "rights": "Tüm Hakları Saklıdır."
