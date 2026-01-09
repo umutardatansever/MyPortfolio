@@ -6,8 +6,8 @@
     "projects": "Projelerim",
     "contact": "İletişim"
   },
-  "home": {
-    "title": "Umut Arda Tansever",
+  "hero": {
+    "greeting": "Umut Arda Tansever",
     "subtitle": "Bilgisayar Mühendisliği Öğrencisi & Frontend Developer",
     "description": "Yazılım dünyasına meraklı, modern web teknolojileri ile projeler geliştiren bir öğrenciyim.",
     "downloadCV": "CV'mi İndir"
@@ -37,8 +37,15 @@
       "Basketbol",
       "Tenis",
       "Yüzme",
-      "Yelken",
-      "Fotoğrafçılık"
+      "Fotoğrafçılık",
+      "Avcılık",
+      "Oyun Geliştirme",
+      "Koşu",
+      "Bisiklet",
+      "Okçuluk",
+      "Satranç",
+      "Balıkçılık",
+      "Seyahat"
     ]
   },
   "skills": {

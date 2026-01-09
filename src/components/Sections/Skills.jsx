@@ -1,0 +1,61 @@
+import { useLanguage } from '../../context/LanguageContext';
+import SkillBar from '../UI/SkillBar';
+import skillsData from '../../data/skills.json';
+import {
+    FaReact, FaJs, FaPython, FaNodeJs, FaGithub,
+    FaMicrochip, FaMemory, FaHtml5, FaCss3Alt, FaCalculator, FaChartBar
+} from 'react-icons/fa';
+import './Skills.css';
+
+const C_Logo = () => (
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10c3.123 0 5.912-1.428 7.74-3.666l-1.93-1.448C16.394 18.52 14.312 19.5 12 19.5c-4.142 0-7.5-3.358-7.5-7.5S7.858 4.5 12 4.5c2.312 0 4.394.98 5.81 2.614l1.93-1.448C17.912 3.428 15.123 2 12 2z" />
+    </svg>
+);
+
+const CPP_Logo = () => (
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+        <path d="M11.34 2.01c-5.5 0-9.96 4.46-9.96 9.96s4.46 9.96 9.96 9.96c3.1 0 5.86-1.41 7.69-3.62l-1.92-1.43c-1.4 1.62-3.46 2.59-5.77 2.59-4.11 0-7.44-3.33-7.44-7.44S7.23 4.57 11.34 4.57c2.31 0 4.37.97 5.77 2.59l1.92-1.43c-1.83-2.21-4.59-3.62-7.69-3.62zm9.14 7.63v2.24h-2.24v1.27h2.24v2.24h1.27v-2.24h2.24v-1.27h-2.24V9.64h-1.27zm3.52 0v2.24h-2.24v1.27h2.24v2.24h1.27v-2.24h2.24v-1.27h-2.24V9.64h-1.27z" />
+    </svg>
+);
+
+const iconMap = {
+    FaHtml5: <FaHtml5 />, FaCss3Alt: <FaCss3Alt />, FaReact: <FaReact />,
+    FaJs: <FaJs />, FaPython: <FaPython />, FaNodeJs: <FaNodeJs />,
+    FaGithub: <FaGithub />, FaMicrochip: <FaMicrochip />, FaMemory: <FaMemory />,
+    FaCalculator: <FaCalculator />, FaChartBar: <FaChartBar />,
+    SiC: <C_Logo />,
+    SiCplusplus: <CPP_Logo />
+};
+
+export default function Skills() {
+    const { translations } = useLanguage();
+
+    return (
+        <section className="skills-section">
+            <h2 className="skills-title">
+                {translations.skills?.title || 'Teknik Yetenekler'}
+            </h2>
+
+            <div className="skills-grid">
+                {skillsData.map((cat, idx) => (
+                    <div key={idx} className="skills-category-card glass-card">
+                        <h3 className="skills-category-title">
+                            {cat.category}
+                        </h3>
+
+                        <div className="skills-list">
+                            {cat.items.map((skill, i) => (
+                                <SkillBar
+                                    key={i}
+                                    skill={skill}
+                                    icon={iconMap[skill.icon] || skill.name[0]}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
+    );
+}

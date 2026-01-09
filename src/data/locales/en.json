@@ -6,8 +6,8 @@
     "projects": "Projects",
     "contact": "Contact"
   },
-  "home": {
-    "title": "Umut Arda Tansever",
+  "hero": {
+    "greeting": "Umut Arda Tansever",
     "subtitle": "Computer Engineering Student & Frontend Developer",
     "description": "A Computer Engineering student passionate about software, developing projects with modern web technologies.",
     "downloadCV": "Download CV"
@@ -37,8 +37,15 @@
       "Basketball",
       "Tennis",
       "Swimming",
-      "Sailing",
-      "Photography"
+      "Photography",
+      "Hunting",
+      "Game Development",
+      "Running",
+      "Cycling",
+      "Archery",
+      "Chess",
+      "Fishing",
+      "Traveling"
     ]
   },
   "skills": {

@@ -1,0 +1,71 @@
+/* ContactForm Component Styles */
+
+.contact-form {
+    width: 100%;
+}
+
+.contact-form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form-input {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+    outline: none;
+    transition: 0.3s all ease;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.contact-form-input:focus {
+    border-color: var(--primary);
+}
+
+.contact-form-textarea {
+    resize: none;
+}
+
+.contact-form-error {
+    color: #ef4444;
+    font-size: 0.9rem;
+    padding: 10px;
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: 8px;
+}
+
+.contact-form-submit {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px;
+}
+
+/* Success State */
+.contact-form-success {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contact-form-success-icon {
+    margin-bottom: 25px;
+    color: #10b981;
+}
+
+.contact-form-success-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.contact-form-success-message {
+    opacity: 0.8;
+    color: var(--text-main);
+}

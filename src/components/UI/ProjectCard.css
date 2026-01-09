@@ -1,0 +1,134 @@
+/* ProjectCard Component Styles */
+
+.project-card {
+    cursor: pointer;
+    width: 100%;
+    max-width: 420px;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.project-card-image {
+    height: 260px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    background: #000;
+}
+
+.project-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-card-image img.blurred {
+    filter: blur(25px) brightness(0.4);
+}
+
+.project-card-secret-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.project-card-secret-text {
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.project-card-featured-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.project-card-content {
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-card-title {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 100%;
+}
+
+.project-card-title.centered {
+    text-align: center;
+}
+
+.project-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-card-body.blurred {
+    filter: blur(10px);
+    opacity: 0.4;
+    user-select: none;
+}
+
+.project-card-body.centered {
+    text-align: center;
+}
+
+.project-card-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-main);
+}
+
+.project-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-card-tags.centered {
+    justify-content: center;
+}
+
+.project-card-tag {
+    font-size: 0.75rem;
+    background: var(--btn-passive);
+    color: var(--btn-text-passive);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: 1px solid var(--glass-border);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-card {
+        max-width: 100%;
+        min-height: auto;
+    }
+
+    .project-card-image {
+        height: 200px;
+    }
+}

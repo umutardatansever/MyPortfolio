@@ -1,0 +1,137 @@
+/* About Section Styles */
+
+.about-section {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--text-main);
+}
+
+.about-content {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.about-card {
+    padding: 30px;
+}
+
+.about-section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.about-section-title-lg {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about-bio-text {
+    line-height: 1.8;
+    opacity: 0.9;
+    color: var(--text-main);
+    font-size: 1.05rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.about-edu-item {
+    margin-bottom: 20px;
+}
+
+.about-edu-school {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.about-edu-dept {
+    opacity: 0.8;
+    color: var(--text-main);
+}
+
+.about-edu-year {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.about-exp-company {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.about-exp-position {
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.about-exp-date {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.about-exp-desc {
+    opacity: 0.8;
+    margin-top: 8px;
+    color: var(--text-main);
+    font-size: 0.9rem;
+}
+
+.about-hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.about-hobby-tag {
+    background: var(--btn-passive);
+    color: var(--btn-text-passive);
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid var(--glass-border);
+}
+
+.about-loading {
+    padding: 40px;
+    text-align: center;
+    color: var(--text-main);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}

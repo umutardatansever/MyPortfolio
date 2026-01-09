@@ -1,137 +1,184 @@
-# Kişisel Portfolyo Web Sitesi
+# Portfolyo - Umut Arda Tansever
 
-Bu proje, React JS kullanılarak geliştirilmiş kişisel portfolyo web sitesidir. Site, yazılım/bilişim alanında kariyer hedefleyen bir öğrencinin profesyonel kimliğini yansıtmaktadır.
+Kişisel portfolyo web sitesi - React JS ile geliştirilmiş modern ve responsive tasarım.
 
-## 🚀 Teknolojiler
+## 📋 Proje Bilgileri
 
-- **React JS** (Vite ile kurulum)
-- **React Router** (Sayfa yönlendirmeleri)
-- **Context API** (Tema ve dil yönetimi)
-- **CSS** (Vanilla CSS - Glassmorphism tasarım)
-- **Local Storage** (Kullanıcı tercihlerini saklama)
+Bu proje, İstanbul Rumeli Üniversitesi Bilgisayar Mühendisliği bölümü Web Teknolojileri dersi kapsamında geliştirilmiş kişisel portfolyo web sitesidir.
 
-## 📁 Proje Yapısı
-
-```
-src/
-├── assets/                    # Görseller ve CV dosyası
-│   ├── ben.jpeg              # Profil fotoğrafı
-│   ├── CV.pdf                # İndirilebilir CV
-│   └── [proje görselleri]    # Proje ekran görüntüleri
-│
-├── components/               # Yeniden kullanılabilir bileşenler
-│   ├── Layout.jsx           # Sayfa düzeni wrapper'ı
-│   ├── Navbar.jsx           # Navigasyon çubuğu
-│   ├── Footer.jsx           # Alt bilgi bölümü
-│   ├── ProjectCard.jsx      # Proje önizleme kartı
-│   ├── SkillBar.jsx         # Yetenek seviye çubuğu
-│   ├── Modal.jsx            # Proje detay modalı
-│   ├── ContactForm.jsx      # İletişim formu
-│   ├── SocialLinks.jsx      # Sosyal medya ikonları
-│   ├── ThemeToggle.jsx      # Tema değiştirme butonu
-│   └── LanguageSwitcher.jsx # Dil değiştirme butonu
-│
-├── context/                  # React Context dosyaları
-│   ├── ThemeContext.jsx     # Dark/Light tema yönetimi
-│   └── LanguageContext.jsx  # TR/EN dil yönetimi
-│
-├── data/                     # Mock veri dosyaları
-│   ├── profile.json         # Kişisel bilgiler
-│   ├── skills.json          # Teknik yetenekler
-│   ├── projects.json        # Proje bilgileri
-│   ├── about.json           # Hakkımda bilgileri
-│   └── locales/             # Çeviri dosyaları
-│       ├── tr.json          # Türkçe metinler
-│       └── en.json          # İngilizce metinler
-│
-├── pages/                    # Sayfa bileşenleri
-│   ├── Homes.jsx            # Ana sayfa (Hero section)
-│   ├── About.jsx            # Hakkımda sayfası
-│   ├── Skills.jsx           # Yetenekler sayfası
-│   ├── Projects.jsx         # Projeler sayfası
-│   ├── Contact.jsx          # İletişim sayfası
-│   └── Projectid4Detail.jsx # Proje detay sayfası
-│
-├── App.jsx                   # Ana uygulama bileşeni
-├── main.jsx                  # Uygulama giriş noktası
-└── index.css                 # Global stiller ve tema değişkenleri
-```
-
-## ⚙️ Kurulum
+## 🚀 Kurulum Talimatları
 
 ### Gereksinimler
-- Node.js (v18 veya üzeri)
+- Node.js (v16 veya üzeri)
 - npm veya yarn
 
-### Adımlar
+### Kurulum Adımları
 
-1. **Projeyi klonlayın veya indirin:**
+1. Projeyi klonlayın veya zip dosyasını çıkarın:
 ```bash
 cd Portfolyom
 ```
 
-2. **Bağımlılıkları yükleyin:**
+2. Bağımlılıkları yükleyin:
 ```bash
 npm install
 ```
 
-3. **Geliştirme sunucusunu başlatın:**
+3. Geliştirme sunucusunu başlatın:
 ```bash
 npm run dev
 ```
 
-4. **Tarayıcıda açın:**
+4. Tarayıcıda açın:
 ```
 http://localhost:5173
 ```
 
 ### Production Build
-
 ```bash
 npm run build
 ```
 
-Build çıktısı `dist/` klasöründe oluşturulur.
+## 📁 Proje Yapısı
 
-## 🎨 Özellikler
+```
+src/
+├── assets/                     # Statik dosyalar (resimler, CV.pdf)
+│   ├── ben.jpeg               # Profil fotoğrafı
+│   ├── CV.pdf                 # İndirilebilir CV dosyası
+│   └── [proje görselleri]     # Proje ekran görüntüleri
+│
+├── components/                 # React Component'ler
+│   ├── Layout/                # Layout Component'leri
+│   │   ├── Navbar.jsx         # Navigasyon barı (logo, menü, tema/dil butonları)
+│   │   ├── Footer.jsx         # Alt bilgi (copyright, sosyal medya)
+│   │   └── Layout.jsx         # Sayfa düzeni wrapper
+│   │
+│   ├── Sections/              # Section Component'leri (Sayfa içerikleri)
+│   │   ├── Hero.jsx           # Ana sayfa hero bölümü
+│   │   ├── About.jsx          # Hakkımda içeriği
+│   │   ├── Skills.jsx         # Yetenekler bölümü
+│   │   ├── Projects.jsx       # Projeler bölümü
+│   │   └── Contact.jsx        # İletişim bölümü
+│   │
+│   └── UI/                    # UI Component'leri (Yeniden kullanılabilir)
+│       ├── ProjectCard.jsx    # Proje önizleme kartı
+│       ├── SkillBar.jsx       # Yetenek seviye çubuğu (progress bar)
+│       ├── SocialLinks.jsx    # Sosyal medya ikonları
+│       ├── ContactForm.jsx    # İletişim formu
+│       ├── ThemeToggle.jsx    # Tema değiştirme butonu
+│       ├── LanguageSwitcher.jsx # Dil değiştirme butonu
+│       └── Modal.jsx          # Proje detay modalı
+│
+├── context/                   # React Context API
+│   ├── ThemeContext.jsx       # Dark/Light mode yönetimi
+│   └── LanguageContext.jsx    # TR/EN dil yönetimi
+│
+├── data/                      # Mock Data (JSON dosyaları)
+│   ├── profile.json           # Kişisel bilgiler
+│   ├── skills.json            # Yetenekler ve kategoriler
+│   ├── projects.json          # Proje verileri
+│   └── locales/               # Dil dosyaları
+│       ├── tr.json            # Türkçe çeviriler
+│       └── en.json            # İngilizce çeviriler
+│
+├── pages/                     # Route Sayfaları (Wrapper)
+│   ├── Home.jsx               # / - Ana Sayfa
+│   ├── AboutPage.jsx          # /hakkimda - Hakkımda
+│   ├── SkillsPage.jsx         # /yetenekler - Yetenekler
+│   ├── ProjectsPage.jsx       # /projeler - Projeler
+│   ├── ContactPage.jsx        # /iletisim - İletişim
+│   └── Projectid4Detail.jsx   # /project-detail/4 - Proje Detay
+│
+├── App.jsx                    # Ana uygulama bileşeni (Router yapısı)
+├── main.jsx                   # React giriş noktası
+├── index.css                  # Global CSS (tema değişkenleri)
+└── App.css                    # Uygulama stilleri
+```
 
-### Tema Değiştirme (Dark/Light Mode)
-- Navbar'da ay/güneş ikonu ile tema değiştirme
-- Tüm sayfalarda tutarlı tema uygulaması
-- Tema tercihi Local Storage'da saklanır
-- Sayfa yenilendiğinde tercih korunur
+## 🛠️ Kullanılan Teknolojiler
 
-### Çoklu Dil Desteği (TR/EN)
-- TR/EN toggle butonu ile dil değiştirme
-- Tüm statik metinler iki dilde
-- Dil tercihi Local Storage'da saklanır
-- Sayfa yenilendiğinde tercih korunur
+| Teknoloji | Açıklama |
+|-----------|----------|
+| **React JS** | UI framework (Vite ile kurulum) |
+| **React Router** | Sayfa yönlendirmeleri |
+| **Context API** | Tema ve dil yönetimi |
+| **CSS Variables** | Dark/Light tema desteği |
+| **Local Storage** | Kullanıcı tercihlerinin saklanması |
+| **React Icons** | İkon kütüphanesi |
 
-### Responsive Tasarım
-- Mobil uyumlu tasarım
-- Hamburger menü (mobil görünümde)
-- Esnek grid yapısı
+## ✨ Özellikler
 
-## 📄 Sayfalar
+### Fonksiyonel Özellikler
+- ✅ **Tema Değiştirme**: Dark/Light mode (LocalStorage ile kalıcı)
+- ✅ **Çoklu Dil Desteği**: Türkçe/İngilizce (LocalStorage ile kalıcı)
+- ✅ **CV İndirme**: PDF formatında CV indirme
+- ✅ **Responsive Tasarım**: Mobil uyumlu (hamburger menü)
+- ✅ **Proje Filtreleme**: Kategoriye göre proje filtreleme
+- ✅ **Proje Modalı**: Detaylı proje görüntüleme
+- ✅ **İletişim Formu**: Form validasyonu ve gönderim simülasyonu
 
+### Sayfalar (Routes)
 | Route | Sayfa |
 |-------|-------|
-| `/` | Ana Sayfa (Hero Section) |
+| `/` | Ana Sayfa (Hero) |
 | `/hakkimda` | Hakkımda |
 | `/yetenekler` | Yetenekler |
 | `/projeler` | Projeler |
 | `/iletisim` | İletişim |
 
+## 📊 Veri Yapısı
+
+### profile.json
+```json
+{
+  "name": "Umut Arda Tansever",
+  "title": "Bilgisayar Mühendisliği Öğrencisi & Frontend Developer",
+  "email": "umutarda.tansever@stu.rumeli.edu.tr",
+  "phone": "+90 505 815 82 51",
+  "location": "İstanbul, Türkiye",
+  "social": { "github", "linkedin", "twitter", "instagram" },
+  "cvFile": "/src/assets/CV.pdf"
+}
+```
+
+### skills.json
+- 4 kategori: Frontend & Web, Programming & Data, Low-Level & Embedded, Backend & Tools
+- 13 farklı yetenek (her biri seviye yüzdesi ile)
+
+### projects.json
+- 6 farklı proje
+- Her proje: id, title, description, image, technologies, category, githubUrl, demoUrl, isFeatured
+
+### locales/tr.json & en.json
+- Tüm statik metinler hem Türkçe hem İngilizce
+
+## 🔧 Context Yapısı
+
+### ThemeContext
+- `theme`: Aktif tema ('dark' | 'light')
+- `toggleTheme()`: Tema değiştirme fonksiyonu
+- LocalStorage: 'theme' key
+
+### LanguageContext
+- `lang`: Aktif dil ('tr' | 'en')
+- `translations`: Çeviri objesi
+- `toggleLanguage()`: Dil değiştirme fonksiyonu
+- LocalStorage: 'language' key
+
 ## 👤 Geliştirici
 
 **Umut Arda Tansever**
-- GitHub: [@umutardatansever](https://github.com/umutardatansever)
+- GitHub: [umutardatansever](https://github.com/umutardatansever)
 - LinkedIn: [Umut Arda Tansever](https://www.linkedin.com/in/umut-arda-tansever-15606a369)
+- Email: umutarda.tansever@stu.rumeli.edu.tr
 
-## 📝 Lisans
+## 📄 Lisans
 
 Bu proje eğitim amaçlı geliştirilmiştir.
 
 ---
-İstanbul Rumeli Üniversitesi - Bilgisayar Mühendisliği  
-BLG331 Web Teknolojileri - Dönem Projesi (2025-2026)
+
+**İstanbul Rumeli Üniversitesi - Bilgisayar Mühendisliği**  
+Web Teknolojileri - Dönem Projesi  
+2025-2026 Güz Dönemi

@@ -1,0 +1,48 @@
+/* SkillBar Component Styles */
+
+.skill-bar {
+    width: 100%;
+}
+
+.skill-bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.skill-bar-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.skill-bar-icon {
+    font-size: 1.4rem;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+}
+
+.skill-bar-level {
+    font-weight: 800;
+    opacity: 0.9;
+    color: var(--text-main);
+}
+
+.skill-bar-track {
+    width: 100%;
+    height: 10px;
+    background: var(--glass-border);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 20px;
+    transition: width 1s ease-out;
+}

@@ -1,0 +1,41 @@
+/* SocialLinks Component Styles */
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-link {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link svg {
+    color: var(--text-main);
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.social-link:hover svg {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+.social-link.github svg {
+    color: var(--text-main);
+}
+
+.social-link.linkedin svg {
+    color: #0077b5;
+}
+
+.social-link.twitter svg {
+    color: #1da1f2;
+}
+
+.social-link.instagram svg {
+    color: #e4405f;
+}

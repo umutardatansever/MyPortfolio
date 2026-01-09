@@ -1,37 +1,87 @@
-{
-  "categories": [
-    {
-      "title": "Frontend & Web",
-      "items": [
-        { "name": "HTML", "level": 100, "icon": "FaHtml5" },
-        { "name": "CSS", "level": 95, "icon": "FaCss3Alt" },
-        { "name": "React", "level": 85, "icon": "FaReact" },
-        { "name": "JavaScript", "level": 60, "icon": "FaJs" }
-      ]
-    },
-    {
-      "title": "Programming & Data",
-      "items": [
-        { "name": "Python", "level": 90, "icon": "FaPython" },
-        { "name": "Matlab", "level": 95, "icon": "FaCalculator" },
-        { "name": "R Language", "level": 70, "icon": "FaChartBar" },
-        { "name": "C Language", "level": 70, "icon": "SiC" },
-        { "name": "C++", "level": 65, "icon": "SiCplusplus" }
-      ]
-    },
-    {
-      "title": "Low-Level & Embedded",
-      "items": [
-        { "name": "DSM-51 Assembly", "level": 95, "icon": "FaMicrochip" },
-        { "name": "Emu8086 Assembly", "level": 90, "icon": "FaMemory" }
-      ]
-    },
-    {
-      "title": "Backend & Tools",
-      "items": [
-        { "name": "Node.js", "level": 65, "icon": "FaNodeJs" },
-        { "name": "Git & GitHub", "level": 80, "icon": "FaGithub" }
-      ]
-    }
-  ]
-}
+[
+  {
+    "category": "Frontend & Web",
+    "items": [
+      {
+        "name": "HTML",
+        "level": 100,
+        "icon": "FaHtml5"
+      },
+      {
+        "name": "CSS",
+        "level": 95,
+        "icon": "FaCss3Alt"
+      },
+      {
+        "name": "React",
+        "level": 85,
+        "icon": "FaReact"
+      },
+      {
+        "name": "JavaScript",
+        "level": 60,
+        "icon": "FaJs"
+      }
+    ]
+  },
+  {
+    "category": "Programming & Data",
+    "items": [
+      {
+        "name": "Python",
+        "level": 90,
+        "icon": "FaPython"
+      },
+      {
+        "name": "Matlab",
+        "level": 95,
+        "icon": "FaCalculator"
+      },
+      {
+        "name": "R Language",
+        "level": 70,
+        "icon": "FaChartBar"
+      },
+      {
+        "name": "C Language",
+        "level": 70,
+        "icon": "SiC"
+      },
+      {
+        "name": "C++",
+        "level": 65,
+        "icon": "SiCplusplus"
+      }
+    ]
+  },
+  {
+    "category": "Low-Level & Embedded",
+    "items": [
+      {
+        "name": "DSM-51 Assembly",
+        "level": 95,
+        "icon": "FaMicrochip"
+      },
+      {
+        "name": "Emu8086 Assembly",
+        "level": 90,
+        "icon": "FaMemory"
+      }
+    ]
+  },
+  {
+    "category": "Backend & Tools",
+    "items": [
+      {
+        "name": "Node.js",
+        "level": 65,
+        "icon": "FaNodeJs"
+      },
+      {
+        "name": "Git & GitHub",
+        "level": 80,
+        "icon": "FaGithub"
+      }
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+/* LanguageSwitcher Component Styles */
+
+.language-switcher {
+    background: var(--glass-border);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 18px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 800;
+    color: var(--text-main);
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.language-switcher:hover {
+    background: var(--btn-passive);
+}
+
+.language-switcher-lang {
+    transition: 0.3s;
+}
+
+.language-switcher-lang.active {
+    opacity: 1;
+}
+
+.language-switcher-lang.inactive {
+    opacity: 0.3;
+}
+
+.language-switcher-divider {
+    margin: 0 5px;
+    opacity: 0.2;
+}

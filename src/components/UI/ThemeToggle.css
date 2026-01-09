@@ -1,0 +1,34 @@
+/* ThemeToggle Component Styles */
+
+.theme-toggle {
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Light Mode */
+.theme-toggle.light {
+    background: #D4D8DD;
+    border: 2px solid rgba(46, 65, 86, 0.3);
+    color: #1A2D42;
+    box-shadow: 0 0 15px rgba(46, 65, 86, 0.2);
+}
+
+/* Dark Mode */
+.theme-toggle.dark {
+    background: #2E4156;
+    border: 2px solid rgba(170, 183, 183, 0.4);
+    color: #AAB7B7;
+    box-shadow: 0 0 15px rgba(170, 183, 183, 0.3);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+}
