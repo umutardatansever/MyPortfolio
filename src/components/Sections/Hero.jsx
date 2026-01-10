@@ -3,11 +3,16 @@ import { useLanguage } from '../../context/LanguageContext';
 import { FaDownload } from 'react-icons/fa';
 import SocialLinks from '../UI/SocialLinks';
 import profileData from '../../data/profile.json';
-import myCV from '../../assets/CV.pdf';
+import cvTR from '../../assets/CVtr.pdf';
+import cvEN from '../../assets/CVen.pdf';
 import './Hero.css';
 
 export default function Hero() {
-    const { translations } = useLanguage();
+    const { translations, lang } = useLanguage();
+
+    // Dil seçimine göre CV dosyasını belirle
+    const currentCV = lang === 'tr' ? cvTR : cvEN;
+    const cvFileName = lang === 'tr' ? 'Umut_Arda_Tansever_CV_TR.pdf' : 'Umut_Arda_Tansever_CV_EN.pdf';
 
     if (!translations || !translations.hero) {
         return (
@@ -52,8 +57,8 @@ export default function Hero() {
 
                 {/* CV İndir Butonu */}
                 <a
-                    href={myCV}
-                    download="Umut_Arda_Tansever_CV.pdf"
+                    href={currentCV}
+                    download={cvFileName}
                     className="hero-cv-btn btn-modern"
                 >
                     <FaDownload /> {translations.hero.downloadCV}

@@ -39,19 +39,19 @@
   --secondary: #C0C8CA;
   --accent: #D4D8DD;
 
-  --bg-main: #1A2D42;
-  --bg-secondary: #2E4156;
+  --bg-main: #0D1821;
+  --bg-secondary: #152535;
   --text-main: #D4D8DD;
   --text-secondary: #C0C8CA;
 
-  --glass: rgba(46, 65, 86, 0.85);
-  --glass-border: rgba(170, 183, 183, 0.12);
-  --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --glass: rgba(21, 37, 53, 0.92);
+  --glass-border: rgba(170, 183, 183, 0.08);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
 
-  --btn-passive: rgba(170, 183, 183, 0.1);
+  --btn-passive: rgba(170, 183, 183, 0.08);
   --btn-text-passive: #AAB7B7;
 
-  --card-hover: rgba(46, 65, 86, 0.5);
+  --card-hover: rgba(21, 37, 53, 0.7);
 }
 
 * {

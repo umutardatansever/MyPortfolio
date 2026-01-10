@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import './SocialLinks.css';
 
 export default function SocialLinks({ social, size = "1.5rem" }) {
@@ -28,18 +28,6 @@ export default function SocialLinks({ social, size = "1.5rem" }) {
                     aria-label="LinkedIn"
                 >
                     <FaLinkedin size={size} />
-                </a>
-            )}
-
-            {social.twitter && (
-                <a
-                    href={social.twitter}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="social-link twitter"
-                    aria-label="Twitter"
-                >
-                    <FaTwitter size={size} />
                 </a>
             )}
 
