@@ -119,6 +119,28 @@
           "AI/ML",
           "Private"
         ]
+      },
+      "7": {
+        "title": "RumeliLearn: E-Öğrenme Platformu",
+        "desc": "React ile geliştirilmiş modern e-öğrenme platformu. Kurs yönetimi, ilerleme takibi ve kullanıcı profili özellikleri içerir.",
+        "longDesc": "React ve modern web teknolojileri ile geliştirilmiş kapsamlı bir e-öğrenme platformu. Platform, kurs yönetimi, kullanıcı ilerleme takibi, kişiselleştirilmiş öğrenme yolları ve sezgisel bir kullanıcı arayüzü sunar. Optimum performans için Vite kullanılarak geliştirilmiştir.",
+        "tags": [
+          "React",
+          "JavaScript",
+          "CSS3",
+          "Vite"
+        ]
+      },
+      "8": {
+        "title": "Zenith: All-in-One Uygulama",
+        "desc": "Günlük kullanılan uygulamaları tek bir platform altında birleştiren modern masaüstü uygulaması. Üretkenliği artırmak için tasarlanmış entegre araç seti.",
+        "longDesc": "Zenith, sık kullanılan günlük uygulamaları tek bir birleşik platform altında toplayan kapsamlı bir masaüstü uygulamasıdır. Üretkenliği artırmak için tasarlanmış olup, birden fazla uygulama arasında geçiş yapmadan temel araçlara kesintisiz erişim sağlar.",
+        "tags": [
+          "React",
+          "JavaScript",
+          "CSS3",
+          "Desktop App"
+        ]
       }
     }
   },

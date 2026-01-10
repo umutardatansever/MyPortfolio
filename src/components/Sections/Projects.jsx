@@ -94,6 +94,18 @@ export default function Projects() {
                                         <FaFileAlt /> {translations.projects?.viewReport || "Raporu Görüntüle"}
                                     </button>
                                 )}
+
+                                {selectedProject.id === 1 && (
+                                    <button
+                                        onClick={() => {
+                                            setSelectedProject(null);
+                                            navigate('/project-detail/1');
+                                        }}
+                                        className="project-modal-btn btn-modern"
+                                    >
+                                        <FaFileAlt /> {translations.projects?.viewReport || "Raporu Görüntüle"}
+                                    </button>
+                                )}
                             </div>
                         </>
                     )}

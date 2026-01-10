@@ -13,6 +13,7 @@ import SkillsPage from './pages/SkillsPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 import Projectid4Detail from './pages/Projectid4Detail';
+import Projectid1Detail from './pages/Projectid1Detail';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
               <Route path="/iletisim" element={<ContactPage />} />
 
               <Route path="/project-detail/4" element={<Projectid4Detail />} />
+              <Route path="/project-detail/1" element={<Projectid1Detail />} />
             </Routes>
           </main>
 

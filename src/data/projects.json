@@ -91,5 +91,37 @@
     "demoUrl": "#",
     "isFeatured": false,
     "isPrivate": true
+  },
+  {
+    "id": 7,
+    "title": "RumeliLearn: E-Öğrenme Platformu",
+    "description": "React ile geliştirilmiş modern e-öğrenme platformu. Kurs yönetimi, ilerleme takibi ve kullanıcı profili özellikleri içerir.",
+    "image": "RumeliLearnpng.png",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "CSS3",
+      "Vite"
+    ],
+    "category": "React",
+    "githubUrl": "https://github.com/umutardatansever/rumeli-learn",
+    "demoUrl": "#",
+    "isFeatured": true
+  },
+  {
+    "id": 8,
+    "title": "Zenith: All-in-One Uygulama",
+    "description": "Günlük kullanılan uygulamaları tek bir platform altında birleştiren modern masaüstü uygulaması. Üretkenliği artırmak için tasarlanmış entegre araç seti.",
+    "image": "Zenith.png",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "CSS3",
+      "Desktop App"
+    ],
+    "category": "React",
+    "githubUrl": "https://github.com/umutardatansever/internetsitesi",
+    "demoUrl": "#",
+    "isFeatured": true
   }
 ]

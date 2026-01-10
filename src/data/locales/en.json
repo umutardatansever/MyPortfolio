@@ -119,6 +119,28 @@
           "AI/ML",
           "Private"
         ]
+      },
+      "7": {
+        "title": "RumeliLearn: E-Learning Platform",
+        "desc": "Modern e-learning platform developed with React. Features course management, progress tracking and user profile.",
+        "longDesc": "A comprehensive e-learning platform built with React and modern web technologies. The platform offers course management, user progress tracking, personalized learning paths, and an intuitive user interface. Developed using Vite for optimal performance.",
+        "tags": [
+          "React",
+          "JavaScript",
+          "CSS3",
+          "Vite"
+        ]
+      },
+      "8": {
+        "title": "Zenith: All-in-One Application",
+        "desc": "Modern desktop application that brings daily-use apps together under one platform. An integrated toolset designed to boost productivity.",
+        "longDesc": "Zenith is a comprehensive desktop application that consolidates frequently used daily applications into a single, unified platform. Designed to enhance productivity, it provides seamless access to essential tools without switching between multiple apps.",
+        "tags": [
+          "React",
+          "JavaScript",
+          "CSS3",
+          "Desktop App"
+        ]
       }
     }
   },

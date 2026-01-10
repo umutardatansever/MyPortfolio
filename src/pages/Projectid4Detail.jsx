@@ -1,56 +1,110 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
+import './Projectid4Detail.css';
 
-import fig1 from '../assets/Figure_1.png'; 
+import fig1 from '../assets/Figure_1.png';
 import fig2 from '../assets/Figure_2.png';
 import fig3 from '../assets/Figure_3.png';
 
 export default function Projectid4Detail() {
+  const { lang } = useLanguage();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const content = {
+    tr: {
+      backBtn: "Projelere Dön",
+      mainTitle: "Veri Analizi Teknik Raporu",
+      subtitle: "Algoritma Performans ve Kümeleme Karşılaştırması",
+
+      // Bölüm 1
+      section1Title: "1. Kümeleme Analizi (K-Means vs DBSCAN)",
+      section1Desc: "Bu analizde, mekansal veri noktalarının gruplandırılması incelenmiştir. <strong>K-Means</strong> algoritması veriyi önceden belirlenen 5 merkeze göre bölümlerken, <strong>DBSCAN</strong> yoğunluk tabanlı yaklaşımı sayesinde gürültülü verileri (outliers) başarıyla ayıklamıştır.",
+      fig1Alt: "Kümeleme Analizi",
+
+      // Bölüm 2
+      section2Title: "2. Çalışma Süresi ve Bellek Tüketimi",
+      section2Desc: "Performans testlerinde <strong>DBSCAN</strong> algoritmasının 1.34MB ile en yüksek bellek kullanımına sahip olduğu görülmüştür. Çalışma süresi bakımından <strong>K-Means</strong> 1.55 saniye ile en maliyetli algoritma olurken, grafik tabanlı algoritmalar çok daha hızlı sonuç vermiştir.",
+      fig2Alt: "Performans Grafiği",
+
+      // Bölüm 3
+      section3Title: "3. Ağ Optimizasyonu (Prim's MST)",
+      section3Desc: "<strong>Prim's MST</strong> algoritması kullanılarak 5 stratejik nokta arasındaki minimum bağlantı maliyeti hesaplanmıştır. Bu model, polis devriye ağının en verimli (en kısa toplam mesafe) şekilde nasıl kurulabileceğini matematiksel olarak kanıtlar.",
+      fig3Alt: "Minimum Spanning Tree"
+    },
+    en: {
+      backBtn: "Back to Projects",
+      mainTitle: "Data Analysis Technical Report",
+      subtitle: "Algorithm Performance and Clustering Comparison",
+
+      // Section 1
+      section1Title: "1. Clustering Analysis (K-Means vs DBSCAN)",
+      section1Desc: "In this analysis, the grouping of spatial data points was examined. The <strong>K-Means</strong> algorithm partitions the data according to 5 predetermined centers, while <strong>DBSCAN</strong> successfully filters out noisy data (outliers) thanks to its density-based approach.",
+      fig1Alt: "Clustering Analysis",
+
+      // Section 2
+      section2Title: "2. Execution Time and Memory Consumption",
+      section2Desc: "In performance tests, the <strong>DBSCAN</strong> algorithm was found to have the highest memory usage at 1.34MB. In terms of execution time, <strong>K-Means</strong> was the most expensive algorithm at 1.55 seconds, while graph-based algorithms produced much faster results.",
+      fig2Alt: "Performance Graph",
+
+      // Section 3
+      section3Title: "3. Network Optimization (Prim's MST)",
+      section3Desc: "Using <strong>Prim's MST</strong> algorithm, the minimum connection cost between 5 strategic points was calculated. This model mathematically proves how the police patrol network can be established in the most efficient way (shortest total distance).",
+      fig3Alt: "Minimum Spanning Tree"
+    }
+  };
+
+  const t = content[lang] || content.tr;
+
   return (
-    <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '40px 20px', color: 'white' }}>
-      <Link to="/projeler" style={{ 
-        display: 'inline-flex', alignItems: 'center', gap: '10px', 
-        marginBottom: '40px', color: 'var(--primary)', textDecoration: 'none', fontWeight: 600 
-      }}>
-        <FaArrowLeft /> Projelere Dön
+    <div className="project-detail-container">
+      {/* Geri Butonu */}
+      <Link to="/projeler" className="project-detail-back-btn">
+        <FaArrowLeft /> {t.backBtn}
       </Link>
 
-      <h1 style={{ fontSize: '3rem', marginBottom: '10px', fontWeight: 800 }}>Veri Analizi Teknik Raporu</h1>
-      <p style={{ opacity: 0.6, marginBottom: '50px' }}>Algoritma Performans ve Kümeleme Karşılaştırması</p>
-      
-      <section className="glass-card" style={{ padding: '40px', borderRadius: '25px', marginBottom: '50px', border: '1px solid var(--glass-border)' }}>
-        <h2 style={{ marginBottom: '25px', color: 'var(--primary)', fontSize: '1.8rem' }}>1. Kümeleme Analizi (K-Means vs DBSCAN)</h2>
-        <div style={{ background: '#1a1a1a', borderRadius: '15px', padding: '10px', marginBottom: '25px' }}>
-          <img src={fig1} style={{ width: '100%', borderRadius: '10px', display: 'block' }} alt="Kümeleme Analizi" />
+      {/* Ana Başlık */}
+      <h1 className="project-detail-title">{t.mainTitle}</h1>
+      <p className="project-detail-subtitle">{t.subtitle}</p>
+
+      {/* Bölüm 1: Kümeleme Analizi */}
+      <section className="project-detail-section glass-card">
+        <h2 className="section-title">{t.section1Title}</h2>
+        <div className="figure-image-container">
+          <img src={fig1} className="figure-image" alt={t.fig1Alt} />
         </div>
-        <p style={{ opacity: 0.8, lineHeight: '1.8', fontSize: '1.1rem' }}>
-          Bu analizde, mekansal veri noktalarının gruplandırılması incelenmiştir. <strong>K-Means</strong> algoritması veriyi önceden belirlenen 5 merkeze göre bölümlerken, <strong>DBSCAN</strong> yoğunluk tabanlı yaklaşımı sayesinde gürültülü verileri (outliers) başarıyla ayıklamıştır.
-        </p>
+        <p
+          className="section-desc"
+          dangerouslySetInnerHTML={{ __html: t.section1Desc }}
+        />
       </section>
 
-      <section className="glass-card" style={{ padding: '40px', borderRadius: '25px', marginBottom: '50px', border: '1px solid var(--glass-border)' }}>
-        <h2 style={{ marginBottom: '25px', color: 'var(--primary)', fontSize: '1.8rem' }}>2. Çalışma Süresi ve Bellek Tüketimi</h2>
-        <div style={{ background: '#1a1a1a', borderRadius: '15px', padding: '10px', marginBottom: '25px' }}>
-          <img src={fig2} style={{ width: '100%', borderRadius: '10px', display: 'block' }} alt="Performans Grafiği" />
+      {/* Bölüm 2: Performans Analizi */}
+      <section className="project-detail-section glass-card">
+        <h2 className="section-title">{t.section2Title}</h2>
+        <div className="figure-image-container">
+          <img src={fig2} className="figure-image" alt={t.fig2Alt} />
         </div>
-        <p style={{ opacity: 0.8, lineHeight: '1.8', fontSize: '1.1rem' }}>
-          Performans testlerinde <strong>DBSCAN</strong> algoritmasının 1.34MB ile en yüksek bellek kullanımına sahip olduğu görülmüştür. Çalışma süresi bakımından <strong>K-Means</strong> 1.55 saniye ile en maliyetli algoritma olurken, grafik tabanlı algoritmalar çok daha hızlı sonuç vermiştir.
-        </p>
+        <p
+          className="section-desc"
+          dangerouslySetInnerHTML={{ __html: t.section2Desc }}
+        />
       </section>
 
-      <section className="glass-card" style={{ padding: '40px', borderRadius: '25px', border: '1px solid var(--glass-border)' }}>
-        <h2 style={{ marginBottom: '25px', color: 'var(--primary)', fontSize: '1.8rem' }}>3. Ağ Optimizasyonu (Prim's MST)</h2>
-        <div style={{ background: '#1a1a1a', borderRadius: '15px', padding: '10px', marginBottom: '25px' }}>
-          <img src={fig3} style={{ width: '100%', borderRadius: '10px', display: 'block' }} alt="Minimum Spanning Tree" />
+      {/* Bölüm 3: Ağ Optimizasyonu */}
+      <section className="project-detail-section glass-card">
+        <h2 className="section-title">{t.section3Title}</h2>
+        <div className="figure-image-container">
+          <img src={fig3} className="figure-image" alt={t.fig3Alt} />
         </div>
-        <p style={{ opacity: 0.8, lineHeight: '1.8', fontSize: '1.1rem' }}>
-          <strong>Prim's MST</strong> algoritması kullanılarak 5 stratejik nokta arasındaki minimum bağlantı maliyeti hesaplanmıştır. Bu model, polis devriye ağının en verimli (en kısa toplam mesafe) şekilde nasıl kurulabileceğini matematiksel olarak kanıtlar.
-        </p>
+        <p
+          className="section-desc"
+          dangerouslySetInnerHTML={{ __html: t.section3Desc }}
+        />
       </section>
     </div>
   );
