@@ -43,32 +43,53 @@ npm run build
 
 ```
 src/
-├── assets/                     # Statik dosyalar (resimler, CV.pdf)
+├── assets/                     # Statik dosyalar (resimler, CV)
 │   ├── ben.jpeg               # Profil fotoğrafı
-│   ├── CV.pdf                 # İndirilebilir CV dosyası
-│   └── [proje görselleri]     # Proje ekran görüntüleri
+│   ├── CVtr.pdf               # Türkçe CV dosyası
+│   ├── CVen.pdf               # İngilizce CV dosyası
+│   ├── HtmlCssPortfolyo.png   # Proje görseli
+│   ├── RumeliLearnpng.png     # Proje görseli
+│   ├── OyunSwipe.png          # Proje görseli
+│   ├── Zenith.png             # Proje görseli
+│   ├── Figure_1.png           # Proje görseli
+│   └── [diğer proje görselleri]
 │
 ├── components/                 # React Component'ler
 │   ├── Layout/                # Layout Component'leri
-│   │   ├── Navbar.jsx         # Navigasyon barı (logo, menü, tema/dil butonları)
-│   │   ├── Footer.jsx         # Alt bilgi (copyright, sosyal medya)
-│   │   └── Layout.jsx         # Sayfa düzeni wrapper
+│   │   ├── Navbar.jsx         # Navigasyon barı
+│   │   ├── Navbar.css         # Navbar stilleri
+│   │   ├── Footer.jsx         # Alt bilgi
+│   │   ├── Footer.css         # Footer stilleri
+│   │   ├── Layout.jsx         # Sayfa düzeni wrapper
+│   │   └── Layout.css         # Layout stilleri
 │   │
-│   ├── Sections/              # Section Component'leri (Sayfa içerikleri)
+│   ├── Sections/              # Section Component'leri
 │   │   ├── Hero.jsx           # Ana sayfa hero bölümü
+│   │   ├── Hero.css           # Hero stilleri
 │   │   ├── About.jsx          # Hakkımda içeriği
+│   │   ├── About.css          # About stilleri
 │   │   ├── Skills.jsx         # Yetenekler bölümü
+│   │   ├── Skills.css         # Skills stilleri
 │   │   ├── Projects.jsx       # Projeler bölümü
-│   │   └── Contact.jsx        # İletişim bölümü
+│   │   ├── Projects.css       # Projects stilleri
+│   │   ├── Contact.jsx        # İletişim bölümü
+│   │   └── Contact.css        # Contact stilleri
 │   │
-│   └── UI/                    # UI Component'leri (Yeniden kullanılabilir)
+│   └── UI/                    # UI Component'leri
 │       ├── ProjectCard.jsx    # Proje önizleme kartı
-│       ├── SkillBar.jsx       # Yetenek seviye çubuğu (progress bar)
+│       ├── ProjectCard.css    # ProjectCard stilleri
+│       ├── SkillBar.jsx       # Yetenek seviye çubuğu
+│       ├── SkillBar.css       # SkillBar stilleri
 │       ├── SocialLinks.jsx    # Sosyal medya ikonları
+│       ├── SocialLinks.css    # SocialLinks stilleri
 │       ├── ContactForm.jsx    # İletişim formu
+│       ├── ContactForm.css    # ContactForm stilleri
 │       ├── ThemeToggle.jsx    # Tema değiştirme butonu
+│       ├── ThemeToggle.css    # ThemeToggle stilleri
 │       ├── LanguageSwitcher.jsx # Dil değiştirme butonu
-│       └── Modal.jsx          # Proje detay modalı
+│       ├── LanguageSwitcher.css # LanguageSwitcher stilleri
+│       ├── Modal.jsx          # Proje detay modalı
+│       └── Modal.css          # Modal stilleri
 │
 ├── context/                   # React Context API
 │   ├── ThemeContext.jsx       # Dark/Light mode yönetimi
@@ -82,18 +103,21 @@ src/
 │       ├── tr.json            # Türkçe çeviriler
 │       └── en.json            # İngilizce çeviriler
 │
-├── pages/                     # Route Sayfaları (Wrapper)
+├── pages/                     # Route Sayfaları
 │   ├── Home.jsx               # / - Ana Sayfa
 │   ├── AboutPage.jsx          # /hakkimda - Hakkımda
 │   ├── SkillsPage.jsx         # /yetenekler - Yetenekler
 │   ├── ProjectsPage.jsx       # /projeler - Projeler
 │   ├── ContactPage.jsx        # /iletisim - İletişim
-│   └── Projectid4Detail.jsx   # /project-detail/4 - Proje Detay
+│   ├── Projectid1Detail.jsx   # /project-detail/1 - Proje Detay
+│   ├── Projectid1Detail.css   # Projectid1Detail stilleri
+│   ├── Projectid4Detail.jsx   # /project-detail/4 - Proje Detay
+│   └── Projectid4Detail.css   # Projectid4Detail stilleri
 │
 ├── App.jsx                    # Ana uygulama bileşeni (Router yapısı)
+├── App.css                    # Uygulama stilleri
 ├── main.jsx                   # React giriş noktası
-├── index.css                  # Global CSS (tema değişkenleri)
-└── App.css                    # Uygulama stilleri
+└── index.css                  # Global CSS (tema değişkenleri)
 ```
 
 ## 🛠️ Kullanılan Teknolojiler
@@ -134,11 +158,13 @@ src/
 {
   "name": "Umut Arda Tansever",
   "title": "Bilgisayar Mühendisliği Öğrencisi & Frontend Developer",
+  "bio": "Yazılım dünyasına meraklı, modern web teknolojileri ile projeler geliştiren bir öğrenciyim.",
+  "avatar": "/src/assets/ben.jpeg",
   "email": "umutarda.tansever@stu.rumeli.edu.tr",
   "phone": "+90 505 815 82 51",
   "location": "İstanbul, Türkiye",
-  "social": { "github", "linkedin", "twitter", "instagram" },
-  "cvFile": "/src/assets/CV.pdf"
+  "social": { "github", "linkedin", "instagram" },
+  "cvFile": "/src/assets/CVtr.pdf"
 }
 ```
 
@@ -147,7 +173,7 @@ src/
 - 13 farklı yetenek (her biri seviye yüzdesi ile)
 
 ### projects.json
-- 6 farklı proje
+- 8 farklı proje
 - Her proje: id, title, description, image, technologies, category, githubUrl, demoUrl, isFeatured
 
 ### locales/tr.json & en.json
