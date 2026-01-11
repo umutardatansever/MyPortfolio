@@ -148,15 +148,17 @@
     "title": "Contact",
     "infoTitle": "Contact Information",
     "followTitle": "Follow Me",
-    "formName": "Your Name",
-    "formEmail": "Your Email",
-    "formSubject": "Subject",
-    "formMsg": "Your Message",
-    "formBtn": "Send Message",
-    "errorRequired": "Please fill in all fields.",
+    "location": "Istanbul, Turkey",
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Your Email",
+    "subjectPlaceholder": "Subject",
+    "messagePlaceholder": "Your Message",
+    "sendBtn": "Send Message",
+    "errorName": "Name field is required.",
     "errorEmail": "Please enter a valid email address.",
+    "errorMessage": "Message field is required.",
     "successTitle": "Successfully Sent!",
-    "successMsg": "I will get back to you soon."
+    "successMessage": "I will get back to you soon."
   },
   "footer": {
     "rights": "All Rights Reserved."

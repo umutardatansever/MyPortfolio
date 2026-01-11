@@ -148,15 +148,17 @@
     "title": "İletişim",
     "infoTitle": "İletişim Bilgileri",
     "followTitle": "Beni Takip Edin",
-    "formName": "Adınız",
-    "formEmail": "E-posta Adresiniz",
-    "formSubject": "Konu",
-    "formMsg": "Mesajınız",
-    "formBtn": "Mesaj Gönder",
-    "errorRequired": "Lütfen tüm alanları doldurunuz.",
+    "location": "İstanbul, Türkiye",
+    "namePlaceholder": "Adınız",
+    "emailPlaceholder": "E-posta Adresiniz",
+    "subjectPlaceholder": "Konu",
+    "messagePlaceholder": "Mesajınız",
+    "sendBtn": "Mesaj Gönder",
+    "errorName": "İsim alanı zorunludur.",
     "errorEmail": "Geçerli bir e-posta adresi giriniz.",
+    "errorMessage": "Mesaj alanı zorunludur.",
     "successTitle": "Başarıyla Gönderildi!",
-    "successMsg": "En kısa sürede dönüş yapacağım."
+    "successMessage": "En kısa sürede dönüş yapacağım."
   },
   "footer": {
     "rights": "Tüm Hakları Saklıdır."

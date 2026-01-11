@@ -28,15 +28,15 @@ export default function ContactForm() {
 
         // Validasyon
         if (!formData.name.trim()) {
-            setError(translations.contact?.errorName || 'İsim alanı zorunludur.');
+            setError(translations.contact?.errorName || 'Name field is required.');
             return;
         }
         if (!formData.email.trim() || !validateEmail(formData.email)) {
-            setError(translations.contact?.errorEmail || 'Geçerli bir e-posta adresi giriniz.');
+            setError(translations.contact?.errorEmail || 'Please enter a valid email address.');
             return;
         }
         if (!formData.message.trim()) {
-            setError(translations.contact?.errorMessage || 'Mesaj alanı zorunludur.');
+            setError(translations.contact?.errorMessage || 'Message field is required.');
             return;
         }
 
@@ -49,10 +49,10 @@ export default function ContactForm() {
             <div className="contact-form-success">
                 <FaCheckCircle size={70} className="contact-form-success-icon" />
                 <h3 className="contact-form-success-title">
-                    {translations.contact?.successTitle || 'Mesajınız Alındı!'}
+                    {translations.contact?.successTitle || 'Message Received!'}
                 </h3>
                 <p className="contact-form-success-message">
-                    {translations.contact?.successMessage || 'En kısa sürede size dönüş yapacağım.'}
+                    {translations.contact?.successMessage || 'I will get back to you soon.'}
                 </p>
             </div>
         );
@@ -64,7 +64,7 @@ export default function ContactForm() {
                 <input
                     type="text"
                     name="name"
-                    placeholder={translations.contact?.namePlaceholder || 'Adınız'}
+                    placeholder={translations.contact?.namePlaceholder || 'Your Name'}
                     value={formData.name}
                     onChange={handleChange}
                     className="contact-form-input"
@@ -72,7 +72,7 @@ export default function ContactForm() {
                 <input
                     type="email"
                     name="email"
-                    placeholder={translations.contact?.emailPlaceholder || 'E-posta Adresiniz'}
+                    placeholder={translations.contact?.emailPlaceholder || 'Your Email'}
                     value={formData.email}
                     onChange={handleChange}
                     className="contact-form-input"
@@ -80,14 +80,14 @@ export default function ContactForm() {
                 <input
                     type="text"
                     name="subject"
-                    placeholder={translations.contact?.subjectPlaceholder || 'Konu'}
+                    placeholder={translations.contact?.subjectPlaceholder || 'Subject'}
                     value={formData.subject}
                     onChange={handleChange}
                     className="contact-form-input"
                 />
                 <textarea
                     name="message"
-                    placeholder={translations.contact?.messagePlaceholder || 'Mesajınız...'}
+                    placeholder={translations.contact?.messagePlaceholder || 'Your Message...'}
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
@@ -99,7 +99,7 @@ export default function ContactForm() {
                 )}
 
                 <button type="submit" className="contact-form-submit btn-modern">
-                    <FaPaperPlane /> {translations.contact?.sendBtn || 'Gönder'}
+                    <FaPaperPlane /> {translations.contact?.sendBtn || 'Send'}
                 </button>
             </div>
         </form>

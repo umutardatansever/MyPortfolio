@@ -40,7 +40,7 @@ export default function Contact() {
                             <div className="contact-info-item">
                                 <FaMapMarkerAlt color="var(--secondary)" size={22} />
                                 <span className="contact-info-text">
-                                    {profileData.location}
+                                    {translations.contact?.location || profileData.location}
                                 </span>
                             </div>
                         </div>
