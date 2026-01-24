@@ -18,7 +18,7 @@ function App() {
   return (
     <LanguageProvider>
       <ThemeProvider>
-        <Router>
+        <Router basename="/MyPortfolio">
           <Layout>
             <Routes>
               <Route path="/" element={<Home />} />
