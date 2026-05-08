@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
 import ThemeToggle from '../UI/ThemeToggle';
 import LanguageSwitcher from '../UI/LanguageSwitcher';
@@ -12,6 +12,7 @@ export default function Navbar() {
     const { translations, lang, toggleLanguage } = useLanguage();
     const location = useLocation();
     const [isMobileOpen, setIsMobileOpen] = useState(false);
+    const navigate = useNavigate();
 
     const isActive = (path) => location.pathname === path;
 
@@ -40,7 +41,9 @@ export default function Navbar() {
                     <Link className={`nav-link ${isActive('/iletisim') ? 'active' : ''}`} to="/iletisim">
                         <FaEnvelope /> <span>{translations.nav.contact}</span>
                     </Link>
+                    <button onClick={() =>navigate('/')}>yonlendir home</button>
                 </div>
+    
 
                 {/* Controls */}
                 <div className="navbar-controls">

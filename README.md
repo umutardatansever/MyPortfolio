@@ -1,210 +1,137 @@
-# Portfolyo - Umut Arda Tansever
+# Portfolio - Umut Arda Tansever
 
-Kişisel portfolyo web sitesi - React JS ile geliştirilmiş modern ve responsive tasarım.
+A personal portfolio site built with React and Vite. It brings together multilingual content, theme switching, project showcases, and contact flows in a single clean experience.
 
-## 📋 Proje Bilgileri
+<div align="center">
+  <a href="https://umutardatansever.github.io/MyPortfolio/" target="_blank" rel="noreferrer noopener">
+    <img src="https://img.shields.io/badge/Live%20Demo-Open%20Portfolio-111827?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
+  </a>
+</div>
 
-Bu proje, İstanbul Rumeli Üniversitesi Bilgisayar Mühendisliği bölümü Web Teknolojileri dersi kapsamında geliştirilmiş kişisel portfolyo web sitesidir.
+## Overview
 
-## 🚀 Kurulum Talimatları
+This project was developed for the Web Technologies course at Istanbul Rumeli University, Department of Computer Engineering. The focus is readability, modularity, and a smooth content-driven browsing flow.
 
-### Gereksinimler
-- Node.js (v16 veya üzeri)
-- npm veya yarn
+## Architecture
 
-### Kurulum Adımları
-
-1. Projeyi klonlayın veya zip dosyasını çıkarın:
-```bash
-cd Portfolyom
+```mermaid
+flowchart TD
+  A[main.jsx] --> B[App.jsx]
+  B --> C[Layout]
+  C --> D[Navbar]
+  C --> E[Footer]
+  C --> F[Pages]
+  F --> G[Home]
+  F --> H[AboutPage]
+  F --> I[SkillsPage]
+  F --> J[ProjectsPage]
+  F --> K[ContactPage]
+  B --> L[Context]
+  L --> M[ThemeContext]
+  L --> N[LanguageContext]
+  B --> O[Data]
+  O --> P[profile.json]
+  O --> Q[skills.json]
+  O --> R[projects.json]
+  O --> S[locales]
 ```
 
-2. Bağımlılıkları yükleyin:
+## Layers
+
+### Presentation layer
+`src/components` contains the reusable Layout, Sections, and UI components. These pieces handle structure, repeated interface patterns, and interaction states.
+
+### Page layer
+`src/pages` defines one component per route. This keeps the app organized as the content grows.
+
+### State and content layer
+`src/context` manages theme and language state. `src/data` stores profile, skills, project, and translation content in JSON format.
+
+## Directory Structure
+
+```text
+src/
+├── assets/
+├── components/
+│   ├── Layout/
+│   ├── Sections/
+│   └── UI/
+├── context/
+├── data/
+│   └── locales/
+├── pages/
+├── App.jsx
+├── App.css
+├── main.jsx
+└── index.css
+```
+
+## Technology Stack
+
+| Technology | Role |
+|---|---|
+| React | UI layer |
+| Vite | Development and build tooling |
+| React Router | Route navigation |
+| Context API | Theme and language state |
+| CSS Variables | Theme tokens |
+| Local Storage | Persisted user preferences |
+| React Icons | Icon set |
+
+## Key Features
+
+| Area | Detail |
+|---|---|
+| Theme | Dark and light mode support |
+| Language | Turkish and English content |
+| Projects | Category filtering and modal details |
+| Contact | Form-oriented contact section |
+| CV | PDF download flow |
+| Responsive | Mobile-friendly layout |
+
+## Routes
+
+| Route | Page |
+|---|---|
+| `/` | Home |
+| `/hakkimda` | About |
+| `/yetenekler` | Skills |
+| `/projeler` | Projects |
+| `/iletisim` | Contact |
+
+## Data Flow
+
+`profile.json`, `skills.json`, and `projects.json` are the main content sources for the interface. `locales/tr.json` and `locales/en.json` provide all translatable text.
+
+## Run Locally
+
+### Requirements
+- Node.js 16 or newer
+- npm
+
+### Install and start
+
 ```bash
 npm install
-```
-
-3. Geliştirme sunucusunu başlatın:
-```bash
 npm run dev
 ```
 
-4. Tarayıcıda açın:
-```
-http://localhost:5173
-```
+The development server opens at `http://localhost:5173` by default.
 
-### Production Build
+### Production build
+
 ```bash
 npm run build
 ```
 
-## 📁 Proje Yapısı
+## Developer
 
-```
-src/
-├── assets/                     # Statik dosyalar (resimler, CV)
-│   ├── ben.jpeg               # Profil fotoğrafı
-│   ├── CVtr.pdf               # Türkçe CV dosyası
-│   ├── CVen.pdf               # İngilizce CV dosyası
-│   ├── HtmlCssPortfolyo.png   # Proje görseli
-│   ├── RumeliLearnpng.png     # Proje görseli
-│   ├── OyunSwipe.png          # Proje görseli
-│   ├── Zenith.png             # Proje görseli
-│   ├── Figure_1.png           # Proje görseli
-│   └── [diğer proje görselleri]
-│
-├── components/                 # React Component'ler
-│   ├── Layout/                # Layout Component'leri
-│   │   ├── Navbar.jsx         # Navigasyon barı
-│   │   ├── Navbar.css         # Navbar stilleri
-│   │   ├── Footer.jsx         # Alt bilgi
-│   │   ├── Footer.css         # Footer stilleri
-│   │   ├── Layout.jsx         # Sayfa düzeni wrapper
-│   │   └── Layout.css         # Layout stilleri
-│   │
-│   ├── Sections/              # Section Component'leri
-│   │   ├── Hero.jsx           # Ana sayfa hero bölümü
-│   │   ├── Hero.css           # Hero stilleri
-│   │   ├── About.jsx          # Hakkımda içeriği
-│   │   ├── About.css          # About stilleri
-│   │   ├── Skills.jsx         # Yetenekler bölümü
-│   │   ├── Skills.css         # Skills stilleri
-│   │   ├── Projects.jsx       # Projeler bölümü
-│   │   ├── Projects.css       # Projects stilleri
-│   │   ├── Contact.jsx        # İletişim bölümü
-│   │   └── Contact.css        # Contact stilleri
-│   │
-│   └── UI/                    # UI Component'leri
-│       ├── ProjectCard.jsx    # Proje önizleme kartı
-│       ├── ProjectCard.css    # ProjectCard stilleri
-│       ├── SkillBar.jsx       # Yetenek seviye çubuğu
-│       ├── SkillBar.css       # SkillBar stilleri
-│       ├── SocialLinks.jsx    # Sosyal medya ikonları
-│       ├── SocialLinks.css    # SocialLinks stilleri
-│       ├── ContactForm.jsx    # İletişim formu
-│       ├── ContactForm.css    # ContactForm stilleri
-│       ├── ThemeToggle.jsx    # Tema değiştirme butonu
-│       ├── ThemeToggle.css    # ThemeToggle stilleri
-│       ├── LanguageSwitcher.jsx # Dil değiştirme butonu
-│       ├── LanguageSwitcher.css # LanguageSwitcher stilleri
-│       ├── Modal.jsx          # Proje detay modalı
-│       └── Modal.css          # Modal stilleri
-│
-├── context/                   # React Context API
-│   ├── ThemeContext.jsx       # Dark/Light mode yönetimi
-│   └── LanguageContext.jsx    # TR/EN dil yönetimi
-│
-├── data/                      # Mock Data (JSON dosyaları)
-│   ├── profile.json           # Kişisel bilgiler
-│   ├── skills.json            # Yetenekler ve kategoriler
-│   ├── projects.json          # Proje verileri
-│   └── locales/               # Dil dosyaları
-│       ├── tr.json            # Türkçe çeviriler
-│       └── en.json            # İngilizce çeviriler
-│
-├── pages/                     # Route Sayfaları
-│   ├── Home.jsx               # / - Ana Sayfa
-│   ├── AboutPage.jsx          # /hakkimda - Hakkımda
-│   ├── SkillsPage.jsx         # /yetenekler - Yetenekler
-│   ├── ProjectsPage.jsx       # /projeler - Projeler
-│   ├── ContactPage.jsx        # /iletisim - İletişim
-│   ├── Projectid1Detail.jsx   # /project-detail/1 - Proje Detay
-│   ├── Projectid1Detail.css   # Projectid1Detail stilleri
-│   ├── Projectid4Detail.jsx   # /project-detail/4 - Proje Detay
-│   └── Projectid4Detail.css   # Projectid4Detail stilleri
-│
-├── App.jsx                    # Ana uygulama bileşeni (Router yapısı)
-├── App.css                    # Uygulama stilleri
-├── main.jsx                   # React giriş noktası
-└── index.css                  # Global CSS (tema değişkenleri)
-```
+Umut Arda Tansever
 
-## 🛠️ Kullanılan Teknolojiler
-
-| Teknoloji | Açıklama |
-|-----------|----------|
-| **React JS** | UI framework (Vite ile kurulum) |
-| **React Router** | Sayfa yönlendirmeleri |
-| **Context API** | Tema ve dil yönetimi |
-| **CSS Variables** | Dark/Light tema desteği |
-| **Local Storage** | Kullanıcı tercihlerinin saklanması |
-| **React Icons** | İkon kütüphanesi |
-
-## ✨ Özellikler
-
-### Fonksiyonel Özellikler
-- ✅ **Tema Değiştirme**: Dark/Light mode (LocalStorage ile kalıcı)
-- ✅ **Çoklu Dil Desteği**: Türkçe/İngilizce (LocalStorage ile kalıcı)
-- ✅ **CV İndirme**: PDF formatında CV indirme
-- ✅ **Responsive Tasarım**: Mobil uyumlu (hamburger menü)
-- ✅ **Proje Filtreleme**: Kategoriye göre proje filtreleme
-- ✅ **Proje Modalı**: Detaylı proje görüntüleme
-- ✅ **İletişim Formu**: Form validasyonu ve gönderim simülasyonu
-
-### Sayfalar (Routes)
-| Route | Sayfa |
-|-------|-------|
-| `/` | Ana Sayfa (Hero) |
-| `/hakkimda` | Hakkımda |
-| `/yetenekler` | Yetenekler |
-| `/projeler` | Projeler |
-| `/iletisim` | İletişim |
-
-## 📊 Veri Yapısı
-
-### profile.json
-```json
-{
-  "name": "Umut Arda Tansever",
-  "title": "Bilgisayar Mühendisliği Öğrencisi & Frontend Developer",
-  "bio": "Yazılım dünyasına meraklı, modern web teknolojileri ile projeler geliştiren bir öğrenciyim.",
-  "avatar": "/src/assets/ben.jpeg",
-  "email": "umutarda.tansever@stu.rumeli.edu.tr",
-  "phone": "+90 505 815 82 51",
-  "location": "İstanbul, Türkiye",
-  "social": { "github", "linkedin", "instagram" },
-  "cvFile": "/src/assets/CVtr.pdf"
-}
-```
-
-### skills.json
-- 4 kategori: Frontend & Web, Programming & Data, Low-Level & Embedded, Backend & Tools
-- 13 farklı yetenek (her biri seviye yüzdesi ile)
-
-### projects.json
-- 8 farklı proje
-- Her proje: id, title, description, image, technologies, category, githubUrl, demoUrl, isFeatured
-
-### locales/tr.json & en.json
-- Tüm statik metinler hem Türkçe hem İngilizce
-
-## 🔧 Context Yapısı
-
-### ThemeContext
-- `theme`: Aktif tema ('dark' | 'light')
-- `toggleTheme()`: Tema değiştirme fonksiyonu
-- LocalStorage: 'theme' key
-
-### LanguageContext
-- `lang`: Aktif dil ('tr' | 'en')
-- `translations`: Çeviri objesi
-- `toggleLanguage()`: Dil değiştirme fonksiyonu
-- LocalStorage: 'language' key
-
-## 👤 Geliştirici
-
-**Umut Arda Tansever**
-- GitHub: [umutardatansever](https://github.com/umutardatansever)
-- LinkedIn: [Umut Arda Tansever](https://www.linkedin.com/in/umut-arda-tansever-15606a369)
+- GitHub: https://github.com/umutardatansever
+- LinkedIn: https://www.linkedin.com/in/umut-arda-tansever-15606a369
 - Email: umutarda.tansever@stu.rumeli.edu.tr
 
-## 📄 Lisans
+## Note
 
-Bu proje eğitim amaçlı geliştirilmiştir.
-
----
-
-**İstanbul Rumeli Üniversitesi - Bilgisayar Mühendisliği**  
-Web Teknolojileri - Dönem Projesi  
-2025-2026 Güz Dönemi
+This project was developed for educational purposes.
